@@ -1,0 +1,12 @@
+.allBreweriesContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.brewery {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 10px;
+  max-width: 600px;
+}

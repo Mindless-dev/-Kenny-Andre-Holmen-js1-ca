@@ -1,0 +1,12 @@
+.brewery {
+  background-color: white;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.breweryWebsite {
+  color: black;
+  text-decoration: underline;
+}
