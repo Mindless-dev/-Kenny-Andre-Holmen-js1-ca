@@ -2,16 +2,12 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const container = document.querySelector(".breweryContainer");
-
 const url = "https://api.openbrewerydb.org/breweries/" + id;
-
-console.log(url);
 
 async function getBrewery() {
   try {
     const response = await fetch(url);
     const brewery = await response.json();
-    console.log(brewery);
     createBreweryHTML(brewery);
   } catch (error) {
     container.innerHTML = `<p class="errorMessage"> An error occured<p>`;

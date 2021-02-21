@@ -11,7 +11,7 @@ const addressError = document.querySelector("#addressError");
 function validationOfForm(event) {
   event.preventDefault();
 
-  if (lengthChecker(userName.value, 0) === true) {
+  if (lengthChecker(userName.value, 0)) {
     nameError.style.display = "none";
   } else {
     nameError.style.display = "block";
@@ -23,16 +23,13 @@ function validationOfForm(event) {
     subjectError.style.display = "block";
   }
 
-  if (lengthChecker(address.value, 25) === true) {
+  if (lengthChecker(address.value, 25)) {
     addressError.style.display = "none";
   } else {
     addressError.style.display = "block";
   }
 
-  if (
-    (emailValidation(email.value) === true) &
-    (email.value.trim().length > 0)
-  ) {
+  if (emailValidation(email.value) & (email.value.trim().length > 0)) {
     emailError.style.display = "none";
   } else {
     emailError.style.display = "block";
